@@ -7,7 +7,7 @@ $(document).ready(function () {
 
   //if they click on North America button they get they get +1 to their score, otherwise they just get one more attempt
   $(document).ready(function () {
-    $('#next').hide();
+    $('.next').hide();
     firstMove();
   });
 
@@ -24,7 +24,7 @@ function firstMove() {
 }
 function firstResults() {
   $('.options button').off();
-  $('#next').show();
+  $('.next').show();
   tries++;
   score = this.right + '/' + this.tries;
   $('.score').html(score);
@@ -32,8 +32,9 @@ function firstResults() {
 }
   //second round
 function secondMove() {
-  $('#next').on('click', function (){
-    $('#next').hide();
+  $('.next').on('click', function (){
+    // keep track of where next is going to
+    $('.next').hide();
     $('img').attr('src','zhangyeDanxiaLandformGeologicalPark.jpg');
     $('.options button').on();
     $('#asia').on('click', function (){
@@ -43,11 +44,12 @@ function secondMove() {
     $('.options :not(#asia)').on('click',function(){
       secondResults();
     });
-  });
-}
+  })
+  };
+
 function secondResults() {
   $('.options button').off();
-  $('#next').show();
+  $('.next').show();
   tries++;
   score = this.right + '/' + this.tries;
   $('.score').html(score);
@@ -57,24 +59,23 @@ function secondResults() {
 // third round
 
 function thirdMove() {
-  $('#next').on('click', function (){
-    $('#next').hide();
+  $('.next').on('click', function (){
+    $('.next').hide();
     $('img').attr('src','rondaSpain.jpg');
     $('.options button').on();
     $('#eur').on('click', function (){
       right++;
       thirdResults();
     });
+    });
     $('.options :not(#eur)').on('click',function(){
       thirdResults();
     });
-  });
-}
+  }
 
 function thirdResults() {
   $('.options button').off();
   $('#next').show();
-  tries++;
   score = this.right + '/' + this.tries;
   $('.score').html(score);
   // fourthMove();
