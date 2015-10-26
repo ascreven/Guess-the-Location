@@ -22,3 +22,7 @@ div > button {
   position: absolute;
   margin: auto;
 }
+
+.score {
+  display: inline;
+}
