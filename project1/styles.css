@@ -8,11 +8,11 @@ img {
   display: inline-block;
 }
 
-.location {
+.location img{
   height: 350px;
 }
 
-div > button {
+.options > button {
   border-radius: 50%;
   height: 100px;
   width: 100px;
@@ -25,4 +25,8 @@ div > button {
 
 .score {
   display: inline;
+}
+
+.next {
+  display: hide;
 }
