@@ -17,7 +17,7 @@ function firstMove() {
   $('#na').on('click', function (){
     right++;
     firstResults();
-});
+  });
   $('.options :not(#na)').on('click', function (){
     firstResults();
   });
@@ -32,10 +32,10 @@ function firstResults() {
 }
   //second round
 function secondMove() {
-    $('#next').on('click', function (){
+  $('#next').on('click', function (){
     $('#next').hide();
     $('img').attr('src','zhangyeDanxiaLandformGeologicalPark.jpg');
-    $('.options button').on()
+    $('.options button').on();
     $('#asia').on('click', function (){
       right++;
       secondResults();
@@ -51,11 +51,31 @@ function secondResults() {
   tries++;
   score = this.right + '/' + this.tries;
   $('.score').html(score);
-  // thirdMove();
+  thirdMove();
 }
 
-  //
+// third round
 
-  // $(this).html('next');
-  // $('h2').html('Snoqualmie Falls');
-  // $('img').attr('src','snoqualmie_falls.jpg');
+function thirdMove() {
+  $('#next').on('click', function (){
+    $('#next').hide();
+    $('img').attr('src','rondaSpain.jpg');
+    $('.options button').on();
+    $('#eur').on('click', function (){
+      right++;
+      thirdResults();
+    });
+    $('.options :not(#eur)').on('click',function(){
+      thirdResults();
+    });
+  });
+}
+
+function thirdResults() {
+  $('.options button').off();
+  $('#next').show();
+  tries++;
+  score = this.right + '/' + this.tries;
+  $('.score').html(score);
+  // fourthMove();
+}
