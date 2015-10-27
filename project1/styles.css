@@ -7,41 +7,60 @@ h1 {
   font-family: Book Antiqua cursive;
   font-style: oblique;
   text-align: center;
-
+  position: fixed;
+  margin: 0px 0px -10px -10px;
+  font-size: 60px;
+  width: 500px;
+  background: tan;
+  z-index: 1;
 }
 
 .completion {
-  width: 400px;
-  margin-left: 35%;
+  width: 600px;
+  float: right;
+  margin-right: 70px;
+  height: 138px;
+  text-align: center;
 }
+
 .completion p {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   padding: 5px;
   display: inline-block;
   border-radius: 10%;
+  margin-top: 44px;
+  /*margin-left: 2px;*/
+  position: relative;
 }
 
 .location {
-  display: inline-block;
+  float: left;
   clear: both;
+  margin-top: 30px;
+  margin-left: 50px;
+  width: 400px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.location h2{
-  display: inline-block;
-  text-align: center;
-  float: center;
-}
 img {
-  display: inline-block;
   height: 350px;
-  position: absolute;
+  border-radius: 5%;
 }
 
 .options {
   display: inline-block;
   width: 400px;
   float: right;
+  margin-top: 50px;
+  margin-right: 170px;
+  text-align: center;
+
+}
+
+.options h2 {
+  margin-top: 0px;
 }
 .options button{
   border-radius: 50%;
@@ -54,4 +73,12 @@ img {
 
 .score {
   display: inline;
+}
+
+.footer {
+  clear: both;
+  background-color: tan;
+  height: 30px;
+  margin-left: -10px;
+  width: 110%
 }
