@@ -30,8 +30,14 @@ h1 {
   display: inline-block;
   border-radius: 10%;
   margin-top: 44px;
-  /*margin-left: 2px;*/
   position: relative;
+}
+
+.completion .score {
+  width: 150px;
+  border-radius: 15px;
+  margin-top: 0px;
+  font-size: 30px;
 }
 
 .location {
@@ -56,11 +62,16 @@ img {
   margin-top: 50px;
   margin-right: 170px;
   text-align: center;
-
 }
 
 .options h2 {
   margin-top: 0px;
+  font-weight: lighter;
+}
+
+.options h2.place {
+  font-weight: bolder;
+  margin-top: -10px;
 }
 .options button{
   border-radius: 50%;

@@ -6,14 +6,21 @@ $(document).ready(function () {
 });
 
   //if they click on North America button they get they get +1 to their score, otherwise they just get one more attempt
-  $(document).ready(function () {
-    $('.next').hide();
-    firstMove();
-  });
-
-function firstMove() {
+$(document).ready(function () {
+  $('.next').hide();
   tries = 0;
   right = 0;
+  score(tries,right);
+  firstMove();
+  $('#1').css('background-color','gray')
+});
+
+function score() {
+  scoreboard = 'Score: ' + right + '/' + tries;
+  $('.score').html(scoreboard);
+}
+
+function firstMove() {
   $('#na').on('click', function (){
     right++;
     firstResults();
@@ -24,11 +31,9 @@ function firstMove() {
 }
 function firstResults() {
   $('.options button').off();
-
   $('.next').show();
   tries++;
-  score = this.right + '/' + this.tries;
-  $('.score').html(score);
+  score(tries,right);
   secondMove();
 }
   //second round
