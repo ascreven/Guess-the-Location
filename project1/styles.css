@@ -1,26 +1,44 @@
+body *{
+  box-sizing: content-box;
+  border: black solid 2px;
+}
+
 h1 {
   font-family: Book Antiqua cursive;
   font-style: oblique;
-  background-color: purple;
-  display:inline-block;
-}
-img {
-  display: inline-block;
+  text-align: center;
 }
 
-.location img{
+.completion p {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 10%;
+}
+
+.location {
+  width: 400px;
+}
+h2 {
+
+}
+
+img {
+  display: inline-block;
   height: 350px;
 }
 
-.options > button {
+.options {
+  display: inline-block;
+}
+.options button{
   border-radius: 50%;
   height: 100px;
   width: 100px;
 }
-
-#changeScreen {
-  position: absolute;
-  margin: auto;
+.options button:hover{
+  text-decoration: underline;
 }
 
 .score {
