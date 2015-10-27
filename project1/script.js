@@ -24,6 +24,7 @@ function firstMove() {
 }
 function firstResults() {
   $('.options button').off();
+
   $('.next').show();
   tries++;
   score = this.right + '/' + this.tries;

@@ -7,8 +7,13 @@ h1 {
   font-family: Book Antiqua cursive;
   font-style: oblique;
   text-align: center;
+
 }
 
+.completion {
+  width: 400px;
+  margin-left: 35%;
+}
 .completion p {
   width: 20px;
   height: 20px;
@@ -18,19 +23,25 @@ h1 {
 }
 
 .location {
-  width: 400px;
-}
-h2 {
-
+  display: inline-block;
+  clear: both;
 }
 
+.location h2{
+  display: inline-block;
+  text-align: center;
+  float: center;
+}
 img {
   display: inline-block;
   height: 350px;
+  position: absolute;
 }
 
 .options {
   display: inline-block;
+  width: 400px;
+  float: right;
 }
 .options button{
   border-radius: 50%;
