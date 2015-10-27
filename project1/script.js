@@ -38,7 +38,9 @@ function secondMove() {
     $('img').attr('src','zhangyeDanxiaLandformGeologicalPark.jpg');
     $('.options button').on();
     $('#asia').on('click', function (){
-      right++;
+      if (tries===1){
+        right++;
+      }
       secondResults();
     });
     $('.options :not(#asia)').on('click',function(){
@@ -64,18 +66,20 @@ function thirdMove() {
     $('img').attr('src','rondaSpain.jpg');
     $('.options button').on();
     $('#eur').on('click', function (){
-      right++;
+      if (tries==2){
+        right++;
+      }
       thirdResults();
-    });
     });
     $('.options :not(#eur)').on('click',function(){
       thirdResults();
+    });
     });
   }
 
 function thirdResults() {
   $('.options button').off();
-  $('#next').show();
+  $('.next').show();
   score = this.right + '/' + this.tries;
   $('.score').html(score);
   // fourthMove();
