@@ -8,10 +8,10 @@ $(document).ready(function () {
   //start game ready to play the first round
 $(document).ready(function () {
   $('.next').hide();
-  tries = 0;
   right = 0;
-  score(tries,right);
-  i=0;
+  i= 0;
+  tries = 0;
+  score(right,tries);
   updateLocation(i);
 });
 
@@ -73,31 +73,35 @@ var locations = [
   },
   // location 8
   {place: "Underground Jenolan Caves",
-  image: "undergroundJenolanCaves.jpg'",
+  image: "undergroundJenolanCaves.jpg",
   continentFormal: "Australia",
   continent: 'aus',
   description: ''
   },
   // location 9
-  {place: "Hanoi'",
-  image: "hanoi.jpg'",
+  {place: "Hanoi",
+  image: "hanoi.jpg",
   continentFormal: "Asia",
   continent: 'asia',
   description: ''
   },
   // location 10
-  {place: "Mount Roraima'",
-  image: "mountRoraima.jpg'",
+  {place: "Mount Roraima",
+  image: "mountRoraima.jpg",
   continentFormal: "Asia",
   continent: 'asia',
   description: ''
   },
 ];
 
-function updateLocation(i) {
+function updateLocation() {
+
+  //hide description, outcome
   $('.descriptions').hide();
   $('.outcome').hide();
+  // change header to ask where it is
   $('.place').html(locations[i].place + '?');
+  // change picture
   $('.location img').attr('src', locations[i].image);
   $('.outcome').html('You are not correct. ' + locations[i].place + ' is located in ' + locations[i].continentFormal + '.');
   var answer = locations[i].continent;
@@ -106,9 +110,9 @@ function updateLocation(i) {
     $('h2:first-child').hide();
     if ($(this).attr('id')==answer){
       right++;
+      score(right,tries);
       $('.outcome').html('You are correct! ' + locations[i].place + ' is located in ' + locations[i].continentFormal + '.');
     }
-    console.log(right);
   score(right,tries);
   $('h2.where').hide();
   $('.place').html(locations[i].place);
@@ -117,21 +121,16 @@ function updateLocation(i) {
   $('.descriptions').show();
   $('.outcome').show();
   $('.next').show();
-  updateScreen();
   });
-}
-
-
-function updateScreen() {
   $('.next').on('click', function (){
-    i++;
     $('h2.where').show();
     $('.continents').show();
     $('h2:first-child').show();
     $('.next').hide();
-    updateLocation(i);
-});
+    i++;
+  });
 }
+
 
 
 
