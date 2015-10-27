@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 
   //start game ready to play the first round
-$(document).ready(function () {
+$(document).ready(function start () {
   $('.next').hide();
   tries = 0;
   right = 0;
@@ -15,6 +15,7 @@ $(document).ready(function () {
   locationNumber = 0;
   updateLocation(locationNumber);
   updateScreen();
+  $('#1').css('background-color','brown');
 });
 
 // scoreboard combines global variables right and tries
@@ -95,7 +96,7 @@ var locations = [
   description: ''
   },
 ];
-//change things to divs to easily hide and show
+
 function updateLocation() {
   $('.descriptions').hide();
   $('.outcome').hide();
@@ -103,11 +104,13 @@ function updateLocation() {
   $('.location img').attr('src', locations[locationNumber].image);
   $('.outcome').html('You are not correct. ' + locations[locationNumber].place + ' is located in ' + locations[locationNumber].continentFormal + '.');
   answer = locations[locationNumber].continent;
-
 }
+
 function handleChoice() {
   $('.continent').on('click', function (){
-    tries++;
+    if (locationNumber < 10) {
+      tries++;
+    }
     var selectedAnswer = $(this).attr('id');
     if (selectedAnswer==answer){
       right++;
@@ -127,9 +130,8 @@ function handleChoice() {
 
 function updateScreen() {
   $('.next').on('click', function (){
-    console.log(locationNumber);
     locationNumber++;
-    console.log(locationNumber);
+    colorBox(locationNumber);
     $('h2.where').show();
     $('.continents').show();
     $('h2:first-child').show();
@@ -137,4 +139,9 @@ function updateScreen() {
     updateLocation(locationNumber);
   });
 
+function colorBox() {
+  var currentBoxIdentifier = locationNumber + 1;
+  var currentBox = $(document.getElementById(currentBoxIdentifier));
+  $(currentBox).css('background-color','brown');
+}
 }
