@@ -12,7 +12,9 @@ $(document).ready(function () {
   right = 0;
   score(tries,right);
   i=0;
+  handleChoice();
   updateLocation(i);
+
 });
 
 // scoreboard combines global variables right and tries
@@ -93,23 +95,27 @@ var locations = [
   description: ''
   },
 ];
-
+//change things to divs to easily hide and show
 function updateLocation(i) {
   $('.descriptions').hide();
   $('.outcome').hide();
   $('.place').html(locations[i].place + '?');
   $('.location img').attr('src', locations[i].image);
   $('.outcome').html('You are not correct. ' + locations[i].place + ' is located in ' + locations[i].continentFormal + '.');
-  var answer = locations[i].continent;
+  answer = locations[i].continent;
+}
+function handleChoice () {
   $('.continent').on('click', function (){
+    debugger
     tries++;
-    $('h2:first-child').hide();
-    if ($(this).attr('id')==answer){
+    var selectedAnswer = $(this).attr('id');
+    if (selectedAnswer==answer){
       right++;
       $('.outcome').html('You are correct! ' + locations[i].place + ' is located in ' + locations[i].continentFormal + '.');
     }
     console.log(right);
   score(right,tries);
+  $('h2:first-child').hide();
   $('h2.where').hide();
   $('.place').html(locations[i].place);
   $('.continents').hide();
@@ -121,7 +127,6 @@ function updateLocation(i) {
   });
 }
 
-
 function updateScreen() {
   $('.next').on('click', function (){
     i++;
@@ -130,7 +135,7 @@ function updateScreen() {
     $('h2:first-child').show();
     $('.next').hide();
     updateLocation(i);
-});
+  });
 }
 
 
