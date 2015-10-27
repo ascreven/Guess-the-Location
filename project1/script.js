@@ -7,6 +7,7 @@ $(document).ready(function () {
 
   //start game ready to play the first round
 $(document).ready(function start () {
+  $('.next').html('Next');
   $('.next').hide();
   tries = 0;
   right = 0;
@@ -124,21 +125,44 @@ function handleChoice() {
   $('.descriptions').html('Description: ' + locations[locationNumber].description);
   $('.descriptions').show();
   $('.outcome').show();
-  $('.next').show();
+  continueButton();
   });
+}
+
+function continueButton() {
+    if (locationNumber < 9) {
+      $('.next').show();
+    } else {
+      console.log('be ready');
+      console.log(locationNumber);
+      $('.next').html('Reset');
+      $('.next').show();
+    }
 }
 
 function updateScreen() {
   $('.next').on('click', function (){
-    locationNumber++;
-    colorBox(locationNumber);
+    if ($('.next').html()==='Reset') {
+      console.log('it is');
+      // locationNumber = 0;
+      // tries = 0;
+      // right = 0;
+      // score(right,tries);
+      // $('.completion p').css('background-color','white');
+      // $('#1').css('background-color','brown');
+      location.reload();
+    } else {
+      locationNumber++;
+      colorBox(locationNumber);
+    }
     $('h2.where').show();
     $('.continents').show();
     $('h2:first-child').show();
     $('.next').hide();
-    updateLocation(locationNumber);
-  });
+    updateLocation();
+});
 
+//color current and completed boxes
 function colorBox() {
   var currentBoxIdentifier = locationNumber + 1;
   var currentBox = $(document.getElementById(currentBoxIdentifier));
