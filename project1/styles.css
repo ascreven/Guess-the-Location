@@ -1,6 +1,38 @@
-body *{
+.border {
+	background: gray;
+	position: fixed;
+  z-index: 1;
+}
+
+#left, #right {
+	top: 0; bottom: 0;
+	width: 30px;
+}
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#top, #bottom {
+	left: 0; right: 0;
+	height: 30px;
+}
+
+#top {
+   top: 0;
+   padding: 0px;
+}
+
+#bottom {
+   bottom: 0;
+}
+
+*{
   box-sizing: content-box;
-  border: black solid 2px;
+  border: black 2px solid;
 }
 
 h1 {
@@ -8,36 +40,41 @@ h1 {
   font-style: oblique;
   text-align: center;
   position: fixed;
-  margin: 0px 0px -10px -10px;
+  margin: 20px 0px -10px -10px;
   font-size: 60px;
   width: 500px;
   background: tan;
-  z-index: 1;
 }
 
 .completion {
-  width: 600px;
-  float: right;
-  margin-right: 70px;
-  height: 138px;
+  /*width: 100%;*/
+  /*float: right;*/
+  /*margin-right: 70px;*/
+  /*height: 138px;*/
+  /*margin-bottom: 0px;*/
+  position: absolute;
   text-align: center;
+  display: inline-block;
 }
 
 .completion p {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   padding: 5px;
   display: inline-block;
   border-radius: 10%;
-  margin-top: 44px;
-  position: relative;
+  /*align-items: center;*/
+  /*position: relative;*/
+  border: black solid 2px;
+  margin-bottom: 0px;
 }
 
-.completion .score {
+.score {
   width: 150px;
   border-radius: 15px;
-  margin-top: 0px;
+  /*margin-top: 0px;*/
   font-size: 30px;
+  /*display: inline;*/
 }
 
 .location {
@@ -64,12 +101,12 @@ img {
   text-align: center;
 }
 
-.options h2 {
+h2 {
   margin-top: 0px;
   font-weight: lighter;
 }
 
-.options h2.place {
+.place {
   font-weight: bolder;
 }
 .options button{
@@ -81,9 +118,7 @@ img {
   text-decoration: underline;
 }
 
-.score {
-  display: inline;
-}
+
 
 button.next{
   float: right;
@@ -93,5 +128,12 @@ button.next{
   border-radius: 15%;
   height: 30px;
   margin-top: 30px;
+}
 
+.descriptions {
+  display: block;
+}
+
+.descriptions:first {
+  size: 500px;
 }
