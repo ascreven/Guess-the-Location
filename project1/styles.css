@@ -77,10 +77,12 @@ h1 {
   /*clear: both;*/
   display: flex;
   position: relative;
+  justify-content: space-between;
   /*flex-flow: wrap;*/
   /*justify-content: space-around;*/
   /*align-self:center;*/
   /*clear: both;*/
+  background-color: tan;
 }
 
 .image {
@@ -131,18 +133,30 @@ img.location {
   /*display: block;*/
 }
 
-.continentChoices {
+div.optionsAndDescriptions {
+  /*margin-left: 0px;*/
+  background-color: #CC9999;
+  flex-wrap: wrap;
+  display: flex;
+  position: absolute;
+  /*width: 380px;*/
+  /*margin:5px;*/
+  justify-content: space-around;
+}
+
+div.continentChoices {
   margin-left: 0px;
   background-color: brown;
   flex-wrap: wrap;
   display: flex;
-  position: absolute;
+  position: relative;
   width: 380px;
   margin:5px;
   justify-content: space-around;
 }
 .continent {
   border-radius: 50%;
+  position: relative;
   height: 100px;
   width: 100px;
   margin-top: 5px;
