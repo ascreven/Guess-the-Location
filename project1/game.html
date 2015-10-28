@@ -11,34 +11,35 @@
 <body>
 
   <div class=flex-container>
+
     <div class=top>
-      <h1>Where in the World?</h1>
+      <h1>Where in the World is...</h1>
+
     <!-- track progress -->
-      <!-- <div class=completion> -->
-        <p class=question top id=1>#1</p>
-        <p class=question top id=2>#2</p>
-        <p class=question top id=3>#3</p>
-        <p class=question top id=4>#4</p>
+
+        <p class=question id=1>#1</p>
+        <p class=question id=2>#2</p>
+        <p class=question id=3>#3</p>
+        <p class=question id=4>#4</p>
         <p class=question id=5>#5</p>
         <p class=question id=6>#6</p>
         <p class=question id=7>#7</p>
         <p class=question id=8>#8</p>
         <p class=question id=9>#9</p>
         <p class=question id=10>#10</p>
-      <!-- </div> -->
+
     </div>
+
+    <!-- scoreboard -->
+    <p class=score></p>
+
+
+
+    <div class=bottom>
     <!-- location name and picture -->
       <div class=image>
-        <img class=location></img>
-      </div>
-
-    <!-- options -->
-      <h2 class=options id=where>Where is</h2>
-      <h2 class=options id=place></h2>
-
-    <!-- description of location -->
-      <div class=descriptions>
-        <p></p>
+        <h2 id=place></h2>
+        <img class=location>
       </div>
 
       <!-- continent choices -->
@@ -51,11 +52,20 @@
         <button class=continent id=aus>Australia</button>
       </div>
 
+    </div>
+
+
+    <!-- description of location -->
+      <div class=descriptions>
+        <p></p>
+      </div>
+
+
+
     <!-- next button -->
       <button class=next>Next</button>
 
-    <!-- scoreboard -->
-      <p class=score></p>
+
 
 
   </div>

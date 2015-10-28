@@ -101,7 +101,7 @@ var locations = [
 function updateLocation() {
   $('.descriptions').hide();
   $('.outcome').hide();
-  $('.place').html(locations[locationNumber].place + '?');
+  $('#place').html(locations[locationNumber].place);
   $('img').attr('src', locations[locationNumber].image);
   $('.outcome').html('You are not correct. ' + locations[locationNumber].place + ' is located in ' + locations[locationNumber].continentFormal + '.');
   answer = locations[locationNumber].continent;
