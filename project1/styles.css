@@ -1,72 +1,142 @@
-.border {
-	background: gray;
-	position: fixed;
-  z-index: 1;
-}
-
-#left, #right {
-	top: 0; bottom: 0;
-	width: 30px;
-}
-#left {
-  left: 0;
-}
-
-#right {
-  right: 0;
-}
-
-#top, #bottom {
-	left: 0; right: 0;
-	height: 30px;
-}
-
-#top {
-   top: 0;
-   padding: 0px;
-}
-
-#bottom {
-   bottom: 0;
-}
+/*@import "compass/css3";*/
 
 *{
-  box-sizing: content-box;
+  /*box-sizing: content-box;*/
   border: black 2px solid;
+  background-color: gray;
+  /*border-radius: 10px;*/
 }
 
+.flex-container {
+  background: white;
+  /*margin: 0px;*/
+  border-radius: 10px;
+
+  /*z-index: 0;*/
+}
+
+.top {
+  background: lavender;
+  /*padding: 0;*/
+  /*margin: 0;*/
+  /*display: -webkit-box;*/
+  /*display: -moz-box;*/
+/*display: -ms-flexbox;*/
+/*display: -webkit-flex;*/
+  display: flex;
+  justify-content: space-between;
+  /*display: inline;*/
+  /*-webkit-flex-flow: row wrap;*/
+  /*flex-direction: row;*/
+}
 h1 {
   font-family: Book Antiqua cursive;
   font-style: oblique;
-  text-align: center;
-  position: fixed;
-  margin: 20px 0px -10px -10px;
   font-size: 60px;
+  font-weight: 40px;
   width: 500px;
+  margin-top: 0px;
+  /*margin: 0 auto;*/
+  /*height: 300px;*/
   background: tan;
+  /*display: flex;*/
+  /*right: 0px;*/
+
+  /*z-index: 0;*/
 }
 
-.completion {
-  /*width: 100%;*/
-  /*float: right;*/
-  /*margin-right: 70px;*/
-  /*height: 138px;*/
-  /*margin-bottom: 0px;*/
-  position: absolute;
-  text-align: center;
-  display: inline-block;
-}
-
-.completion p {
+.question {
+  display: inline-flex;
+  /*left: 0px;*/
+  background-color: white;
+  /*position: relative;*/
+  /*margin: 0 auto;*/
+  /*clear: both;*/
+  /*margin: 20px;*/
+  /*margin: 10px;*/
+  background-color: inherit;
   width: 30px;
   height: 30px;
-  padding: 5px;
-  display: inline-block;
+  /*display: block;*/
   border-radius: 10%;
-  /*align-items: center;*/
-  /*position: relative;*/
   border: black solid 2px;
-  margin-bottom: 0px;
+}
+/*
+.question {
+
+  /*padding: 5px;
+  margin: 5px*/
+/*}*/
+
+.image {
+  width: 400px;
+  height: 350px;
+  /*clear: both;*/
+  display: flex;
+}
+img {
+  /*border: 2px black solid;*/
+  /*float: left;*/
+  /*clear: both;*/
+  /*margin-top: 30px;*/
+  /*margin-left: 50px;*/
+  /*width: 400px;*/
+  /*text-align: center;*/
+  /*height: 350px;*/
+  border-radius: 5%;
+  /*clear: both;*/
+  /*margin-bottom: 30px;*/
+  /*position: relative;*/
+}
+
+h2.options {
+  /*display: inline-block;*/
+  width: 400px;
+  /*float: right;*/
+  /*margin-top: 50px;*/
+  /*margin-right: 100px;*/
+  text-align: center;
+  /*margin-top: 0px;*/
+  font-weight: lighter;
+}
+
+#place {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.descriptions {
+  /*display: block;*/
+}
+
+.descriptions:first {
+  /*size: 500px;*/
+}
+
+.continentChoices {
+  background-color: brown;
+  flex-wrap: wrap;
+  display: inline-block;
+}
+.continent {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+
+}
+
+.continent:hover {
+  text-decoration: underline;
+}
+
+.next{
+  /*float: right;*/
+  /*position: relative;*/
+  width: 60px;
+  /*margin-right: 160px;*/
+  border-radius: 15%;
+  height: 30px;
+  /*margin-top: 30px;*/
 }
 
 .score {
@@ -75,65 +145,4 @@ h1 {
   /*margin-top: 0px;*/
   font-size: 30px;
   /*display: inline;*/
-}
-
-.location {
-  float: left;
-  clear: both;
-  margin-top: 30px;
-  margin-left: 50px;
-  width: 400px;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-img {
-  height: 350px;
-  border-radius: 5%;
-}
-
-.options {
-  display: inline-block;
-  width: 400px;
-  float: right;
-  margin-top: 50px;
-  margin-right: 170px;
-  text-align: center;
-}
-
-h2 {
-  margin-top: 0px;
-  font-weight: lighter;
-}
-
-.place {
-  font-weight: bolder;
-}
-.options button{
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-}
-.options button:hover{
-  text-decoration: underline;
-}
-
-
-
-button.next{
-  float: right;
-  position: relative;
-  width: 60px;
-  margin-right: 160px;
-  border-radius: 15%;
-  height: 30px;
-  margin-top: 30px;
-}
-
-.descriptions {
-  display: block;
-}
-
-.descriptions:first {
-  size: 500px;
 }

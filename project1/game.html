@@ -7,48 +7,56 @@
   <script src='script.js'></script>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<!-- location name and picture -->
-  <h1>Where in the World?</h1>
-  <div class=border id="left"></div>
-  <div class=border id="right"></div>
-  <div class=border id="top"></div>
-  <div class=border id="bottom"></div>
 
-  <div class=location>
-    <!-- <h2>Snoqualmie Falls</h2> -->
-    <img src=>
-  </div>
-<!-- options -->
-  <div class=options>
-    <div class=outcome></div>
-      <h2 class=where>Where is</h2>
-      <h2 class=place></h2>
-    <div class=descriptions>
-    </p>
-  </div>
-    <div class=continents>
-      <button class=continent id=na>North America</button>
-      <button class=continent id=sa>South America</button>
-      <button class=continent id=asia>Asia</button>
-      <button class=continent id=eur>Europe</button>
-      <button class=continent id=afr>Africa</button>
-      <button class=continent id=aus>Australia</button>
+<body>
+
+  <div class=flex-container>
+    <div class=top>
+      <h1>Where in the World?</h1>
+    <!-- track progress -->
+      <!-- <div class=completion> -->
+        <p class=question top id=1>#1</p>
+        <p class=question top id=2>#2</p>
+        <p class=question top id=3>#3</p>
+        <p class=question top id=4>#4</p>
+        <p class=question id=5>#5</p>
+        <p class=question id=6>#6</p>
+        <p class=question id=7>#7</p>
+        <p class=question id=8>#8</p>
+        <p class=question id=9>#9</p>
+        <p class=question id=10>#10</p>
+      <!-- </div> -->
     </div>
-    <button class=next>Next</button>
+    <!-- location name and picture -->
+      <div class=image>
+        <img class=location></img>
+      </div>
+
+    <!-- options -->
+      <h2 class=options id=where>Where is</h2>
+      <h2 class=options id=place></h2>
+
+    <!-- description of location -->
+      <div class=descriptions>
+        <p></p>
+      </div>
+
+      <!-- continent choices -->
+      <div class=continentChoices>
+        <button class=continent id=na>North America</button>
+        <button class=continent id=sa>South America</button>
+        <button class=continent id=asia>Asia</button>
+        <button class=continent id=eur>Europe</button>
+        <button class=continent id=afr>Africa</button>
+        <button class=continent id=aus>Australia</button>
+      </div>
+
+    <!-- next button -->
+      <button class=next>Next</button>
+
+    <!-- scoreboard -->
       <p class=score></p>
-    <div class=completion>
-      <p id=1></p>
-      <p id=2></p>
-      <p id=3></p>
-      <p id=4></p>
-      <p id=5></p>
-      <p id=6></p>
-      <p id=7></p>
-      <p id=8></p>
-      <p id=9></p>
-      <p id=10></p>
-    </div>
+
 
   </div>
 </body>
