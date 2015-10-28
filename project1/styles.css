@@ -36,6 +36,7 @@ h1 {
   width: 450px;
   margin-top: 0px;
   margin-left: -20px;
+  margin-bottom: 0px;
   /*margin: 0 auto;*/
   /*height: 300px;*/
   background: tan;
@@ -64,7 +65,7 @@ h1 {
 .score {
   width: 150px;
   border-radius: 15px;
-  margin-top: -99px;
+  margin-top: -80px;
   right: 300px;
   text-align: center;
   background-color: teal;
@@ -72,8 +73,14 @@ h1 {
   font-size: 30px;
   display: inline-block;
 }
-
+#place {
+  margin: -15px 0px 0px 0px;
+  text-decoration: underline;
+  text-align: right;
+  width: 600px;
+}
 .bottom {
+  margin-top: 20px;
   /*clear: both;*/
   display: flex;
   position: relative;
@@ -83,7 +90,7 @@ h1 {
   /*align-self:center;*/
   /*clear: both;*/
   background-color: tan;
-  height: 405px;
+  height: 400px;
 }
 
 .image {
@@ -94,21 +101,7 @@ h1 {
   background-color: #006666;
 }
 
-h2#place {
-  /*font-size: 50px;*/
-  z-index: 4;
-  margin-top: -30px;
-  /*box-sizing: content-box;*/
-  /*font-weight: bolder;*/
-  text-decoration: underline;
-  /*max-width: 400px;*/
-  /*margin: 0 auto;*/
-  position: absolute;
-  /*display: inline block;*/
-  text-align: center;
-  /*width: 300px;*/
-  /*height: 100px;*/
-}
+
 
 img.location {
   /*width: 400px;*/
@@ -140,7 +133,7 @@ div.optionsAndDescriptions {
   flex-wrap: wrap;
   display: flex;
   position: relative;
-  /*width: 380px;*/
+  width: 380px;
   /*margin: auto;*/
   justify-content: space-between;
 }
@@ -169,20 +162,22 @@ div.continentChoices {
   text-decoration: underline;
 }
 
-.descriptions {
-  display: block;
+.rightOrWrong {
+  text-align: center;
+  margin: auto;
 }
 
-.descriptions:first {
-  /*size: 500px;*/
+.description {
+  text-align: justify;
+  margin: auto;
 }
 
 .next{
-  /*float: right;*/
+  margin: auto;
   /*position: relative;*/
-  width: 60px;
+  width: 150px;
   /*margin-right: 160px;*/
-  border-radius: 15%;
-  height: 30px;
+  border-radius: 5px;
+  height: 40px;
   /*margin-top: 30px;*/
 }

@@ -16,7 +16,8 @@ $(document).ready(function start () {
   locationNumber = 0;
   updateLocation(locationNumber);
   updateScreen();
-  $('#1').css('background-color','brown');
+  $('#1').css('background-color','#CC9999');
+  $('.rightOrWrong').hide();
 });
 
 // scoreboard combines global variables right and tries
@@ -98,12 +99,14 @@ var locations = [
   },
 ];
 
+//change elements before selection
+
 function updateLocation() {
-  $('.descriptions').hide();
-  $('.outcome').hide();
+  $('.description').hide();
+  $('.rightOrWrong').hide();
   $('#place').html(locations[locationNumber].place);
   $('img').attr('src', locations[locationNumber].image);
-  $('.outcome').html('You are not correct. ' + locations[locationNumber].place + ' is located in ' + locations[locationNumber].continentFormal + '.');
+  $('.rightOrWrong').html('You are not correct. ' + locations[locationNumber].place + ' is located in ' + locations[locationNumber].continentFormal + '.');
   answer = locations[locationNumber].continent;
 }
 
@@ -115,15 +118,22 @@ function handleChoice() {
     var selectedAnswer = $(this).attr('id');
     if (selectedAnswer==answer){
       right++;
-      $('.outcome').html('You are correct! ' + locations[locationNumber].place + ' is located in ' + locations[locationNumber].continentFormal + '.');
+      $('.rightOrWrong').html('You are correct! ' + locations[locationNumber].place + ' is located in ' + locations[locationNumber].continentFormal + '.');
+      var currentBoxIdentifier = locationNumber + 1;
+        currentBox = $(document.getElementById(currentBoxIdentifier));
+      $(currentBox).css('background-color','#336633');
+    } else {
+        var currentBoxIdentifier = locationNumber + 1;
+        currentBox = $(document.getElementById(currentBoxIdentifier));
+        $(currentBox).css('background-color','#880000');
     }
   score(right,tries);
   // $('h2:first-child').hide();
   $('.place').html(locations[locationNumber].place);
-  $('.continents').hide();
-  $('.descriptions').html('DESCRIPTION: ' + locations[locationNumber].description);
-  $('.descriptions').show();
-  $('.outcome').show();
+  $('.continentChoices').hide();
+  $('.description').html('DESCRIPTION: ' + locations[locationNumber].description);
+  $('.description').show();
+  $('.rightOrWrong').show();
   continueButton();
   });
 }
@@ -148,9 +158,9 @@ function updateScreen() {
       locationNumber++;
       colorBox(locationNumber);
     }
-    $('h2.where').show();
-    $('.continents').show();
-    $('h2:first-child').show();
+    // $('h2.where').show();
+    $('.continentChoices').show();
+    // $('h2:first-child').show();
     $('.next').hide();
     updateLocation();
 });
@@ -159,6 +169,6 @@ function updateScreen() {
 function colorBox() {
   var currentBoxIdentifier = locationNumber + 1;
   var currentBox = $(document.getElementById(currentBoxIdentifier));
-  $(currentBox).css('background-color','brown');
+  $(currentBox).css('background-color','#CC9999');
 }
 }
