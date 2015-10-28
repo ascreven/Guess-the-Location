@@ -118,8 +118,7 @@ function handleChoice() {
       $('.outcome').html('You are correct! ' + locations[locationNumber].place + ' is located in ' + locations[locationNumber].continentFormal + '.');
     }
   score(right,tries);
-  $('h2:first-child').hide();
-  $('h2.where').hide();
+  // $('h2:first-child').hide();
   $('.place').html(locations[locationNumber].place);
   $('.continents').hide();
   $('.descriptions').html('DESCRIPTION: ' + locations[locationNumber].description);

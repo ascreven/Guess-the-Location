@@ -77,53 +77,54 @@ h1 {
   /*clear: both;*/
   display: flex;
   position: relative;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   /*flex-flow: wrap;*/
-  /*justify-content: space-around;*/
+  justify-content: space-around;
   /*align-self:center;*/
   /*clear: both;*/
   background-color: tan;
+  height: 405px;
 }
 
 .image {
-  position: relative;
-  width: 600px;
+  position: relative fixed;
+  /*max-width: 600px;*/
   display: flex;
-  justify-content: space-around;
+  /*justify-content: space-between;*/
+  background-color: #006666;
 }
 
 h2#place {
   /*font-size: 50px;*/
-  /*z-index: 4;*/
+  z-index: 4;
   margin-top: -30px;
   /*box-sizing: content-box;*/
   /*font-weight: bolder;*/
   text-decoration: underline;
-  width: 400px;
+  /*max-width: 400px;*/
   /*margin: 0 auto;*/
   position: absolute;
   /*display: inline block;*/
   text-align: center;
   /*width: 300px;*/
   /*height: 100px;*/
-
 }
 
 img.location {
-  width: 400px;
-  height: 350px;
+  /*width: 400px;*/
+  /*height: 350px;*/
   /*border: 2px black solid;*/
   /*float: left;*/
   /*clear: both;*/
   /*margin-top: 50px;*/
   /*margin-left: 50px;*/
-  /*width: 400px;*/
+  max-width: 400px;
   /*text-align: center;*/
   /*height: 350px;*/
   border-radius: 5%;
   /*display: flex;*/
-  margin-top: 10px;
-  position: relative fixed;
+  /*margin-top: 10px;*/
+  /*position: relative fixed;*/
   /*flex-direction: row;*/
   /*clear: both;*/
   /*margin-bottom: 30px;*/
@@ -138,22 +139,23 @@ div.optionsAndDescriptions {
   background-color: #CC9999;
   flex-wrap: wrap;
   display: flex;
-  position: absolute;
+  position: relative;
   /*width: 380px;*/
-  /*margin:5px;*/
-  justify-content: space-around;
+  /*margin: auto;*/
+  justify-content: space-between;
 }
 
 div.continentChoices {
-  margin-left: 0px;
+  /*margin-left: 0px;*/
   background-color: brown;
   flex-wrap: wrap;
   display: flex;
-  position: relative;
+  position: relative fixed;
   width: 380px;
-  margin:5px;
-  justify-content: space-around;
+  margin: auto;
+  justify-content: space-between;
 }
+
 .continent {
   border-radius: 50%;
   position: relative;
@@ -168,7 +170,7 @@ div.continentChoices {
 }
 
 .descriptions {
-  /*display: block;*/
+  display: block;
 }
 
 .descriptions:first {
