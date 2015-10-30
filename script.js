@@ -93,8 +93,8 @@ var locations = [
   // location 10
   {place: "Mount Roraima",
   image: "mountRoraima.jpg",
-  continentFormal: "Asia",
-  continent: 'asia',
+  continentFormal: "South America",
+  continent: 'sa',
   description: 'Mount Roraima is a 31 square kilometer summit with 400 meter cliffs that serves as a triple border point for Venezuela, Brazil, and Guyana. It is over 2 billion years old, making it one of the oldest geological formations.'
   },
 ];
