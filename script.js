@@ -7,6 +7,7 @@ $(document).ready(function () {
 
   //start game ready to play the first round
 $(document).ready(function start () {
+  // mms: you search the DOM for '.next' quite a bit.  I recommend creating a variable so the search happens once (or less)
   $('.next').html('Next');
   $('.next').hide();
   tries = 0;
@@ -26,6 +27,7 @@ function score(right,tries) {
 }
 
 // information for each of the locations
+// mms: nice encapsulation of data
 var locations = [
   // location 1
   {place: 'Snoqualmie Falls',
@@ -106,6 +108,7 @@ function updateLocation() {
   $('.rightOrWrong').hide();
   $('#place').html(locations[locationNumber].place);
   $('img').attr('src', locations[locationNumber].image);
+  // mms: duplication.  `locations[locationNumber]` is used many places.  Could this be "currentLocation"?  How different would your code read if you used that variable?
   $('.rightOrWrong').html('You are not correct. ' + locations[locationNumber].place + ' is located in ' + locations[locationNumber].continentFormal + '.');
   answer = locations[locationNumber].continent;
 }
@@ -116,9 +119,11 @@ function handleChoice() {
       tries++;
     }
     var selectedAnswer = $(this).attr('id');
+    // mms: nice conditional, what you are teting is obvious
     if (selectedAnswer==answer){
       right++;
       $('.rightOrWrong').html('You are correct! ' + locations[locationNumber].place + ' is located in ' + locations[locationNumber].continentFormal + '.');
+      // mms: duplication.  Looks like you can move these 3 lines outside of the conditional.  They are called no matter what.  You just need a variable to hold the box color.  It make it much easier to see how the "else" is different from the "if".
       var currentBoxIdentifier = locationNumber + 1;
         currentBox = $(document.getElementById(currentBoxIdentifier));
       $(currentBox).css('background-color','#336633');
@@ -139,6 +144,7 @@ function handleChoice() {
 }
 
 function continueButton() {
+    // mms:  what does 9 represent?  Try to use a variable or the source value for this (locations.length?)
     if (locationNumber < 9) {
       $('.next').show();
     } else {
