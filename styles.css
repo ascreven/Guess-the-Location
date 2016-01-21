@@ -1,10 +1,7 @@
-/*@import "compass/css3";*/
+
 
 *{
-  /*box-sizing: content-box;*/
-  /*border: black 1px solid;*/
   background-color: gray;
-  /*border-radius: 10px;*/
 }
 
 .flex-container {
@@ -16,58 +13,31 @@
 }
 
 .top {
-  /*background: lavender;*/
-  /*padding: 0;*/
-  /*margin: 0;*/
-  /*display: -webkit-box;*/
-  /*display: -moz-box;*/
-/*display: -ms-flexbox;*/
-/*display: -webkit-flex;*/
   display: flex;
   justify-content: space-around;
   z-index: 3;
-  /*display: inline;*/
-  /*-webkit-flex-flow: row wrap;*/
-  /*flex-direction: row;*/
 }
 h1 {
-  /*font-family: Book Antiqua cursive;*/
   font-style: oblique;
   border-radius: 5px;
   font-size: 60px;
   font-weight: 40px;
-  /*font-family: cursive;*/
   width: 450px;
   margin-top: 0px;
   margin-left: -23px;
   margin-bottom: 0px;
-  /*margin: 0 auto;*/
-  /*height: 300px;*/
   background: tan;
-  /*display: flex;*/
-  /*right: 0px;*/
 }
 
 .question {
   display: inline-flex;
-  /*left: 0px;*/
   background-color: white;
-  /*position: relative;*/
-  /*margin: 0 auto;*/
-  /*clear: both;*/
-  /*margin: 20px;*/
-  /*margin: 10px;*/
   background-color: #C1CDCD;
   width: 30px;
   height: 30px;
-  /*text-align: justify;*/
-  /*display: block;*/
   border-radius: 10%;
   border: black solid 2px;
-  /*font-size: 18px;*/
   font-family: "Lucida Console";
-    /*text-align:justify;*/
-  /*margin: auto;*/
 }
 
 .score {
@@ -84,23 +54,16 @@ h1 {
 #place {
   margin: -25px 0px 0px 305px;
   text-decoration: underline;
-  /*text-align: right;*/
   font-family: fantasy;
   line-height: 50px;
   font-size: xx-large;
-  /*z-index: 1;*/
   color: #5C246E;
 }
 .bottom {
   margin-top: 0px;
-  /*clear: both;*/
   display: flex;
   position: relative;
-  /*justify-content: space-between;*/
-  /*flex-flow: wrap;*/
   justify-content: space-around;
-  /*align-self:center;*/
-  /*clear: both;*/
   background-color: tan;
   height: 400px;
   border-radius: 5px;
@@ -110,51 +73,24 @@ h1 {
   position: relative fixed;
   max-width: 600px;
   display: flex;
-  /*justify-content: space-between;*/
-  /*background-color: #006666;*/
 }
 
 
 
 img.location {
-  /*width: 400px;*/
-  /*height: 350px;*/
-  /*border: 2px black solid;*/
-  /*float: left;*/
-  /*clear: both;*/
-  /*margin-top: 50px;*/
-  /*margin-left: 50px;*/
   max-width: 400px;
-  /*left: 10;*/
-  /*text-align: center;*/
-  /*height: 350px;*/
-  /*border-radius: 5%;*/
-  /*display: flex;*/
-  /*margin-top: 10px;*/
-  /*position: relative fixed;*/
-  /*flex-direction: row;*/
-  /*clear: both;*/
-  /*margin-bottom: 30px;*/
-  /*align-self: center;*/
-  /*display: flex;*/
-  /*justify-content: space-around;*/
-  /*display: block;*/
 }
 
 div.optionsAndDescriptions {
-  /*margin-left: 0px;*/
   background-color: inherit;
   flex-wrap: wrap;
   display: flex;
   position: relative;
-  /*width: 380px;*/
-  /*margin: auto;*/
   justify-content: space-between;
   border-radius: 5px;
 }
 
 div.continentChoices {
-  /*margin-left: 0px;*/
   background-color: #CC9999;
   border-radius: 5%;
   flex-wrap: wrap;
@@ -211,8 +147,6 @@ button.continent {
   font-family: fantasy;
   font-size: 20px;
   width: 150px;
-  /*margin-right: 160px;*/
   border-radius: 5px;
   height: 60px;
-  /*margin-top: 30px;*/
 }
